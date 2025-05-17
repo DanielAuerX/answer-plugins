@@ -1,14 +1,83 @@
-<html>
-<head><title>LDAP Login</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDAP Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        h3 {
+            color: #31171f;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: inline-block;
+            text-align: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+        }
+
+        label {
+            color: #495057;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            color: #31171f;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #31171f;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #ea0029;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #31171f;
+        }
+    </style>
+</head>
 <body>
-    <h3>LDAP Login</h3>
-    <form method="get" action="%s">
-        <label>Username:</label><br/>
-        <input name="username" type="text"/><br/>
-        <label>Password:</label><br/>
-        <input name="password" type="password"/><br/>
-        <br/>
-        <input type="submit" value="Login"/>
-    </form>
+    <div class="container">
+        <h3>LDAP Login</h3>
+        <form method="post" action="RECEIVER_URL_PLACEHOLDER">
+            <label>Username:</label>
+            <input name="username" type="text" required/>
+            <label>Password:</label>
+            <input name="password" type="password" required/>
+            <br/>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
 </body>
 </html>
